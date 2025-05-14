@@ -14,7 +14,7 @@ export default function SignInForm() {
   const handleSubmit = async e => {
     e.preventDefault();
     try {
-      const res = await axios.get('http://localhost:5000/users');
+      const res = await axios.get('/api/users');
       const user = res.data.find(
         u => u.email === formData.email && u.password === formData.password
       );
