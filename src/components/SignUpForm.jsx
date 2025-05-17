@@ -12,7 +12,7 @@ export default function SignUpForm() {
   const handleSubmit = async e => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/users', formData);
+      await axios.post('/api/users', formData);
       alert('User Registered!');
     } catch (error) {
       console.error("Registration failed:", error);
